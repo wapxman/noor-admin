@@ -25,8 +25,12 @@ section{margin:0 0 40px}
 .cnt{margin-left:auto;color:#8a8f82;font-size:12.5px}
 .sub{margin:8px 2px 0;color:#5d6257;font-size:13.5px}
 .note{margin:3px 2px 0;color:#8a8f82;font-size:12.5px;max-width:900px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-top:14px;align-items:start}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;
+      margin-top:14px;align-items:start}
 .card{margin:0;cursor:zoom-in}
+/* Без жёсткой пропорции: среди кадров есть и вертикальные снимки телефона,
+   и широкие листы с раскладкой экранов. Любая фиксированная рамка одни из них
+   либо обрезает, либо сплющивает в полоску. */
 .card img{width:100%;height:auto;display:block;
           border:1px solid #e0e0d9;border-radius:9px;background:#fff}
 .card:hover img{border-color:#a8ae9c}
