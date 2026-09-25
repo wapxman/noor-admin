@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Noor 0.9.0 — экраны по этапам</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+     background:#f6f6f4;color:#20241f}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e3e3dd;padding:14px 24px 0}
+h1{margin:0 0 2px;font-size:19px;letter-spacing:-.2px}
+.lead{margin:0 0 4px;color:#6b6f66;font-size:13px}
+.back{display:inline-block;margin:0 0 10px;font-size:12.5px;color:#4a7c59;text-decoration:none}
+.back:hover{text-decoration:underline}
+nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px}
+nav a{white-space:nowrap;text-decoration:none;color:#3d4238;background:#f1f1ec;border:1px solid #e3e3dd;
+      border-radius:999px;padding:5px 11px;font-size:12.5px}
+nav a b{color:#8a8f82;font-weight:600;margin-left:3px}
+nav a:hover{background:#e8e8e0}
+main{padding:22px 24px 60px;max-width:1500px;margin:0 auto}
+section{margin:0 0 40px}
+.bar{display:flex;align-items:baseline;gap:12px;background:#fff;border:1px solid #e3e3dd;
+     border-radius:9px;padding:11px 15px}
+.bar h2{margin:0;font-size:16.5px;letter-spacing:-.2px}
+.cnt{margin-left:auto;color:#8a8f82;font-size:12.5px}
+.sub{margin:8px 2px 0;color:#5d6257;font-size:13.5px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;
+      margin-top:14px;align-items:start}
+.card{margin:0;cursor:zoom-in}
+.card img{width:100%;height:auto;display:block;border:1px solid #e0e0d9;border-radius:9px;background:#fff}
+.card:hover img{border-color:#a8ae9c}
+figcaption{margin-top:5px;font-size:11.5px;color:#7b8072;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#lb{position:fixed;inset:0;background:rgba(24,26,22,.93);display:none;z-index:50;
+    align-items:center;justify-content:center;flex-direction:column;gap:12px}
+#lb.on{display:flex}
+#lb img{max-width:92vw;max-height:82vh;border-radius:10px}
+#lbn{color:#e7e7df;font-size:13px}
+#lb .x{position:absolute;top:14px;right:20px;color:#e7e7df;font-size:30px;cursor:pointer;line-height:1}
+#lb .arr{position:absolute;top:50%;transform:translateY(-50%);color:#e7e7df;font-size:40px;
+         cursor:pointer;padding:16px;user-select:none}
+#lb .prev{left:8px}#lb .next{right:8px}
+@media(max-width:600px){main{padding:16px 12px 40px}header{padding:12px 12px 0}}
+</style></head><body>
+<header>
+  <h1>Noor 0.9.0 — экраны по этапам</h1>
+  <p class="lead">150 кадров текущей сборки, разложены по пути пользователя.</p>
+  <a class="back" href="../">← вся история по версиям</a>
+  <nav><a href="#start">1. Первый запуск <b>2</b></a>
+<a href="#map">2. Карта пути <b>15</b></a>
+<a href="#lesson">3. Урок «Первые буквы» <b>11</b></a>
+<a href="#games">4. Игры и упражнения <b>25</b></a>
+<a href="#module">5. Повторение и испытание <b>9</b></a>
+<a href="#locale">6. Три языка интерфейса <b>6</b></a>
+<a href="#narrow">7. Узкий экран (320 точек) <b>67</b></a>
+<a href="#design">8. Листы раскладки <b>15</b></a></nav>
+</header>
+<main><section id="start"><div class="bar"><h2>1. Первый запуск</h2><span class="cnt">2 экранов</span></div><p class="sub">Онбординг и восстановление состояния</p><div class="grid"><figure class="card" data-v="img/957491bc63_v.jpg" data-n="process restored map"><img loading="lazy" src="img/957491bc63_t.jpg" alt="process restored map"><figcaption>process restored map</figcaption></figure>
+<figure class="card" data-v="img/392c4b725e_v.jpg" data-n="release onboarding"><img loading="lazy" src="img/392c4b725e_t.jpg" alt="release onboarding"><figcaption>release onboarding</figcaption></figure></div></section>
+<section id="map"><div class="bar"><h2>2. Карта пути</h2><span class="cnt">15 экранов</span></div><p class="sub">Главный экран: маршрут, замки, возвращение после урока</p><div class="grid"><figure class="card" data-v="img/8a93cf2b63_v.jpg" data-n="map film start"><img loading="lazy" src="img/8a93cf2b63_t.jpg" alt="map film start"><figcaption>map film start</figcaption></figure>
+<figure class="card" data-v="img/f5616f7653_v.jpg" data-n="locked preview"><img loading="lazy" src="img/f5616f7653_t.jpg" alt="locked preview"><figcaption>locked preview</figcaption></figure>
+<figure class="card" data-v="img/d12bae45b6_v.jpg" data-n="map route 0"><img loading="lazy" src="img/d12bae45b6_t.jpg" alt="map route 0"><figcaption>map route 0</figcaption></figure>
+<figure class="card" data-v="img/81f4b27a88_v.jpg" data-n="map route 1"><img loading="lazy" src="img/81f4b27a88_t.jpg" alt="map route 1"><figcaption>map route 1</figcaption></figure>
+<figure class="card" data-v="img/f61f9951f3_v.jpg" data-n="map route 2"><img loading="lazy" src="img/f61f9951f3_t.jpg" alt="map route 2"><figcaption>map route 2</figcaption></figure>
+<figure class="card" data-v="img/0ed1e20dbb_v.jpg" data-n="map film end"><img loading="lazy" src="img/0ed1e20dbb_t.jpg" alt="map film end"><figcaption>map film end</figcaption></figure>
+<figure class="card" data-v="img/e1cae42776_v.jpg" data-n="map after 1"><img loading="lazy" src="img/e1cae42776_t.jpg" alt="map after 1"><figcaption>map after 1</figcaption></figure>
+<figure class="card" data-v="img/ec460bff8a_v.jpg" data-n="map after 2"><img loading="lazy" src="img/ec460bff8a_t.jpg" alt="map after 2"><figcaption>map after 2</figcaption></figure>
+<figure class="card" data-v="img/039f9f61d1_v.jpg" data-n="map after 3"><img loading="lazy" src="img/039f9f61d1_t.jpg" alt="map after 3"><figcaption>map after 3</figcaption></figure>
+<figure class="card" data-v="img/1854382342_v.jpg" data-n="map after 4"><img loading="lazy" src="img/1854382342_t.jpg" alt="map after 4"><figcaption>map after 4</figcaption></figure>
+<figure class="card" data-v="img/c1b75c66d5_v.jpg" data-n="map after 5"><img loading="lazy" src="img/c1b75c66d5_t.jpg" alt="map after 5"><figcaption>map after 5</figcaption></figure>
+<figure class="card" data-v="img/172f49b025_v.jpg" data-n="map after 6"><img loading="lazy" src="img/172f49b025_t.jpg" alt="map after 6"><figcaption>map after 6</figcaption></figure>
+<figure class="card" data-v="img/b12d600a43_v.jpg" data-n="map after 7"><img loading="lazy" src="img/b12d600a43_t.jpg" alt="map after 7"><figcaption>map after 7</figcaption></figure>
+<figure class="card" data-v="img/36df13f7f8_v.jpg" data-n="map after 8"><img loading="lazy" src="img/36df13f7f8_t.jpg" alt="map after 8"><figcaption>map after 8</figcaption></figure>
+<figure class="card" data-v="img/a899debc15_v.jpg" data-n="map after 9"><img loading="lazy" src="img/a899debc15_t.jpg" alt="map after 9"><figcaption>map after 9</figcaption></figure></div></section>
+<section id="lesson"><div class="bar"><h2>3. Урок «Первые буквы»</h2><span class="cnt">11 экранов</span></div><p class="sub">Полный урок: показ, ответы, обводка, награда</p><div class="grid"><figure class="card" data-v="img/dc86dff80a_v.jpg" data-n="map fresh audio on"><img loading="lazy" src="img/dc86dff80a_t.jpg" alt="map fresh audio on"><figcaption>map fresh audio on</figcaption></figure>
+<figure class="card" data-v="img/6b6901dcd7_v.jpg" data-n="letters film start"><img loading="lazy" src="img/6b6901dcd7_t.jpg" alt="letters film start"><figcaption>letters film start</figcaption></figure>
+<figure class="card" data-v="img/13eb942079_v.jpg" data-n="letters intro"><img loading="lazy" src="img/13eb942079_t.jpg" alt="letters intro"><figcaption>letters intro</figcaption></figure>
+<figure class="card" data-v="img/7887d0e83b_v.jpg" data-n="audio off"><img loading="lazy" src="img/7887d0e83b_t.jpg" alt="audio off"><figcaption>audio off</figcaption></figure>
+<figure class="card" data-v="img/44a801a3c5_v.jpg" data-n="wrong feedback audio off after"><img loading="lazy" src="img/44a801a3c5_t.jpg" alt="wrong feedback audio off after"><figcaption>wrong feedback audio off after</figcaption></figure>
+<figure class="card" data-v="img/ec3f716717_v.jpg" data-n="audio on"><img loading="lazy" src="img/ec3f716717_t.jpg" alt="audio on"><figcaption>audio on</figcaption></figure>
+<figure class="card" data-v="img/31e39650f3_v.jpg" data-n="matching selected"><img loading="lazy" src="img/31e39650f3_t.jpg" alt="matching selected"><figcaption>matching selected</figcaption></figure>
+<figure class="card" data-v="img/9aaa21de65_v.jpg" data-n="correct feedback audio on after"><img loading="lazy" src="img/9aaa21de65_t.jpg" alt="correct feedback audio on after"><figcaption>correct feedback audio on after</figcaption></figure>
+<figure class="card" data-v="img/a005bc799f_v.jpg" data-n="letters trace"><img loading="lazy" src="img/a005bc799f_t.jpg" alt="letters trace"><figcaption>letters trace</figcaption></figure>
+<figure class="card" data-v="img/4c6caf5095_v.jpg" data-n="letters reward"><img loading="lazy" src="img/4c6caf5095_t.jpg" alt="letters reward"><figcaption>letters reward</figcaption></figure>
+<figure class="card" data-v="img/9f14583d63_v.jpg" data-n="letters film end"><img loading="lazy" src="img/9f14583d63_t.jpg" alt="letters film end"><figcaption>letters film end</figcaption></figure></div></section>
+<section id="games"><div class="bar"><h2>4. Игры и упражнения</h2><span class="cnt">25 экранов</span></div><p class="sub">Лови ба, точки, память, формы, сортировка, огласовки</p><div class="grid"><figure class="card" data-v="img/d3b8546880_v.jpg" data-n="catch film start"><img loading="lazy" src="img/d3b8546880_t.jpg" alt="catch film start"><figcaption>catch film start</figcaption></figure>
+<figure class="card" data-v="img/45c49ff31c_v.jpg" data-n="catch intro"><img loading="lazy" src="img/45c49ff31c_t.jpg" alt="catch intro"><figcaption>catch intro</figcaption></figure>
+<figure class="card" data-v="img/72bafe4617_v.jpg" data-n="catch reward"><img loading="lazy" src="img/72bafe4617_t.jpg" alt="catch reward"><figcaption>catch reward</figcaption></figure>
+<figure class="card" data-v="img/2b29a1ab10_v.jpg" data-n="catch film end"><img loading="lazy" src="img/2b29a1ab10_t.jpg" alt="catch film end"><figcaption>catch film end</figcaption></figure>
+<figure class="card" data-v="img/0cd8eb89c9_v.jpg" data-n="dots film start"><img loading="lazy" src="img/0cd8eb89c9_t.jpg" alt="dots film start"><figcaption>dots film start</figcaption></figure>
+<figure class="card" data-v="img/c63da61a51_v.jpg" data-n="dots intro"><img loading="lazy" src="img/c63da61a51_t.jpg" alt="dots intro"><figcaption>dots intro</figcaption></figure>
+<figure class="card" data-v="img/d31e0aa876_v.jpg" data-n="dots reward"><img loading="lazy" src="img/d31e0aa876_t.jpg" alt="dots reward"><figcaption>dots reward</figcaption></figure>
+<figure class="card" data-v="img/be0fe19668_v.jpg" data-n="dots film end"><img loading="lazy" src="img/be0fe19668_t.jpg" alt="dots film end"><figcaption>dots film end</figcaption></figure>
+<figure class="card" data-v="img/533e4b577f_v.jpg" data-n="memory film start"><img loading="lazy" src="img/533e4b577f_t.jpg" alt="memory film start"><figcaption>memory film start</figcaption></figure>
+<figure class="card" data-v="img/0447cf359e_v.jpg" data-n="memory intro"><img loading="lazy" src="img/0447cf359e_t.jpg" alt="memory intro"><figcaption>memory intro</figcaption></figure>
+<figure class="card" data-v="img/a5f098233a_v.jpg" data-n="memory reward"><img loading="lazy" src="img/a5f098233a_t.jpg" alt="memory reward"><figcaption>memory reward</figcaption></figure>
+<figure class="card" data-v="img/6f62f78408_v.jpg" data-n="memory film end"><img loading="lazy" src="img/6f62f78408_t.jpg" alt="memory film end"><figcaption>memory film end</figcaption></figure>
+<figure class="card" data-v="img/4aa5a007f1_v.jpg" data-n="forms film start"><img loading="lazy" src="img/4aa5a007f1_t.jpg" alt="forms film start"><figcaption>forms film start</figcaption></figure>
+<figure class="card" data-v="img/847fb473e3_v.jpg" data-n="forms intro"><img loading="lazy" src="img/847fb473e3_t.jpg" alt="forms intro"><figcaption>forms intro</figcaption></figure>
+<figure class="card" data-v="img/c7d2dfee82_v.jpg" data-n="joined answer"><img loading="lazy" src="img/c7d2dfee82_t.jpg" alt="joined answer"><figcaption>joined answer</figcaption></figure>
+<figure class="card" data-v="img/f815254bbf_v.jpg" data-n="forms reward"><img loading="lazy" src="img/f815254bbf_t.jpg" alt="forms reward"><figcaption>forms reward</figcaption></figure>
+<figure class="card" data-v="img/7e055a4fff_v.jpg" data-n="forms film end"><img loading="lazy" src="img/7e055a4fff_t.jpg" alt="forms film end"><figcaption>forms film end</figcaption></figure>
+<figure class="card" data-v="img/31fc8ec012_v.jpg" data-n="sort film start"><img loading="lazy" src="img/31fc8ec012_t.jpg" alt="sort film start"><figcaption>sort film start</figcaption></figure>
+<figure class="card" data-v="img/66a480b705_v.jpg" data-n="sort intro"><img loading="lazy" src="img/66a480b705_t.jpg" alt="sort intro"><figcaption>sort intro</figcaption></figure>
+<figure class="card" data-v="img/ed79e8fe6e_v.jpg" data-n="sort reward"><img loading="lazy" src="img/ed79e8fe6e_t.jpg" alt="sort reward"><figcaption>sort reward</figcaption></figure>
+<figure class="card" data-v="img/0207087b13_v.jpg" data-n="sort film end"><img loading="lazy" src="img/0207087b13_t.jpg" alt="sort film end"><figcaption>sort film end</figcaption></figure>
+<figure class="card" data-v="img/ee1f314623_v.jpg" data-n="vowels film start"><img loading="lazy" src="img/ee1f314623_t.jpg" alt="vowels film start"><figcaption>vowels film start</figcaption></figure>
+<figure class="card" data-v="img/d8d1dbbd9e_v.jpg" data-n="vowels intro"><img loading="lazy" src="img/d8d1dbbd9e_t.jpg" alt="vowels intro"><figcaption>vowels intro</figcaption></figure>
+<figure class="card" data-v="img/24109aaa1f_v.jpg" data-n="vowels reward"><img loading="lazy" src="img/24109aaa1f_t.jpg" alt="vowels reward"><figcaption>vowels reward</figcaption></figure>
+<figure class="card" data-v="img/12e8886afc_v.jpg" data-n="vowels film end"><img loading="lazy" src="img/12e8886afc_t.jpg" alt="vowels film end"><figcaption>vowels film end</figcaption></figure></div></section>
+<section id="module"><div class="bar"><h2>5. Повторение и испытание</h2><span class="cnt">9 экранов</span></div><p class="sub">Закрепление модуля и финальное испытание</p><div class="grid"><figure class="card" data-v="img/509dbaba5c_v.jpg" data-n="module1 review film start"><img loading="lazy" src="img/509dbaba5c_t.jpg" alt="module1 review film start"><figcaption>module1 review film start</figcaption></figure>
+<figure class="card" data-v="img/a425b5269a_v.jpg" data-n="module1 review intro"><img loading="lazy" src="img/a425b5269a_t.jpg" alt="module1 review intro"><figcaption>module1 review intro</figcaption></figure>
+<figure class="card" data-v="img/ceec4dc757_v.jpg" data-n="module1 review reward"><img loading="lazy" src="img/ceec4dc757_t.jpg" alt="module1 review reward"><figcaption>module1 review reward</figcaption></figure>
+<figure class="card" data-v="img/53d3b10658_v.jpg" data-n="module1 review film end"><img loading="lazy" src="img/53d3b10658_t.jpg" alt="module1 review film end"><figcaption>module1 review film end</figcaption></figure>
+<figure class="card" data-v="img/3c3900d461_v.jpg" data-n="module1 challenge film start"><img loading="lazy" src="img/3c3900d461_t.jpg" alt="module1 challenge film start"><figcaption>module1 challenge film start</figcaption></figure>
+<figure class="card" data-v="img/4c46c4c98a_v.jpg" data-n="module1 challenge intro"><img loading="lazy" src="img/4c46c4c98a_t.jpg" alt="module1 challenge intro"><figcaption>module1 challenge intro</figcaption></figure>
+<figure class="card" data-v="img/ffadad6ecb_v.jpg" data-n="module1 challenge reward"><img loading="lazy" src="img/ffadad6ecb_t.jpg" alt="module1 challenge reward"><figcaption>module1 challenge reward</figcaption></figure>
+<figure class="card" data-v="img/c5dc446979_v.jpg" data-n="module1 challenge film end"><img loading="lazy" src="img/c5dc446979_t.jpg" alt="module1 challenge film end"><figcaption>module1 challenge film end</figcaption></figure>
+<figure class="card" data-v="img/dc7718a4a0_v.jpg" data-n="replay no extra xp"><img loading="lazy" src="img/dc7718a4a0_t.jpg" alt="replay no extra xp"><figcaption>replay no extra xp</figcaption></figure></div></section>
+<section id="locale"><div class="bar"><h2>6. Три языка интерфейса</h2><span class="cnt">6 экранов</span></div><p class="sub">Узбекский, английский, русский</p><div class="grid"><figure class="card" data-v="img/1ff954e450_v.jpg" data-n="map locale uz"><img loading="lazy" src="img/1ff954e450_t.jpg" alt="map locale uz"><figcaption>map locale uz</figcaption></figure>
+<figure class="card" data-v="img/48806689f5_v.jpg" data-n="lighthouse uz"><img loading="lazy" src="img/48806689f5_t.jpg" alt="lighthouse uz"><figcaption>lighthouse uz</figcaption></figure>
+<figure class="card" data-v="img/de865c955a_v.jpg" data-n="map locale en"><img loading="lazy" src="img/de865c955a_t.jpg" alt="map locale en"><figcaption>map locale en</figcaption></figure>
+<figure class="card" data-v="img/540172c34f_v.jpg" data-n="lighthouse en"><img loading="lazy" src="img/540172c34f_t.jpg" alt="lighthouse en"><figcaption>lighthouse en</figcaption></figure>
+<figure class="card" data-v="img/f08262775d_v.jpg" data-n="map locale ru"><img loading="lazy" src="img/f08262775d_t.jpg" alt="map locale ru"><figcaption>map locale ru</figcaption></figure>
+<figure class="card" data-v="img/1a39938861_v.jpg" data-n="lighthouse ru"><img loading="lazy" src="img/1a39938861_t.jpg" alt="lighthouse ru"><figcaption>lighthouse ru</figcaption></figure></div></section>
+<section id="narrow"><div class="bar"><h2>7. Узкий экран (320 точек)</h2><span class="cnt">67 экранов</span></div><p class="sub">Тот же проход на маленьком телефоне</p><div class="grid"><figure class="card" data-v="img/ebe4e119eb_v.jpg" data-n="map film start"><img loading="lazy" src="img/ebe4e119eb_t.jpg" alt="map film start"><figcaption>map film start</figcaption></figure>
+<figure class="card" data-v="img/6654d805f2_v.jpg" data-n="process restored map"><img loading="lazy" src="img/6654d805f2_t.jpg" alt="process restored map"><figcaption>process restored map</figcaption></figure>
+<figure class="card" data-v="img/46e86e3fdb_v.jpg" data-n="map fresh audio on"><img loading="lazy" src="img/46e86e3fdb_t.jpg" alt="map fresh audio on"><figcaption>map fresh audio on</figcaption></figure>
+<figure class="card" data-v="img/22fb4c0bce_v.jpg" data-n="locked preview"><img loading="lazy" src="img/22fb4c0bce_t.jpg" alt="locked preview"><figcaption>locked preview</figcaption></figure>
+<figure class="card" data-v="img/830cef2e38_v.jpg" data-n="map route 0"><img loading="lazy" src="img/830cef2e38_t.jpg" alt="map route 0"><figcaption>map route 0</figcaption></figure>
+<figure class="card" data-v="img/8f28063fa4_v.jpg" data-n="map route 1"><img loading="lazy" src="img/8f28063fa4_t.jpg" alt="map route 1"><figcaption>map route 1</figcaption></figure>
+<figure class="card" data-v="img/c434938a61_v.jpg" data-n="map route 2"><img loading="lazy" src="img/c434938a61_t.jpg" alt="map route 2"><figcaption>map route 2</figcaption></figure>
+<figure class="card" data-v="img/7c08b1c824_v.jpg" data-n="map film end"><img loading="lazy" src="img/7c08b1c824_t.jpg" alt="map film end"><figcaption>map film end</figcaption></figure>
+<figure class="card" data-v="img/0dae5f8546_v.jpg" data-n="letters film start"><img loading="lazy" src="img/0dae5f8546_t.jpg" alt="letters film start"><figcaption>letters film start</figcaption></figure>
+<figure class="card" data-v="img/63c4cbfc78_v.jpg" data-n="letters intro"><img loading="lazy" src="img/63c4cbfc78_t.jpg" alt="letters intro"><figcaption>letters intro</figcaption></figure>
+<figure class="card" data-v="img/a6a55d9923_v.jpg" data-n="audio off"><img loading="lazy" src="img/a6a55d9923_t.jpg" alt="audio off"><figcaption>audio off</figcaption></figure>
+<figure class="card" data-v="img/74c2c4d048_v.jpg" data-n="wrong feedback audio off after"><img loading="lazy" src="img/74c2c4d048_t.jpg" alt="wrong feedback audio off after"><figcaption>wrong feedback audio off after</figcaption></figure>
+<figure class="card" data-v="img/422237f29c_v.jpg" data-n="audio on"><img loading="lazy" src="img/422237f29c_t.jpg" alt="audio on"><figcaption>audio on</figcaption></figure>
+<figure class="card" data-v="img/119663578a_v.jpg" data-n="matching selected"><img loading="lazy" src="img/119663578a_t.jpg" alt="matching selected"><figcaption>matching selected</figcaption></figure>
+<figure class="card" data-v="img/80cde994ab_v.jpg" data-n="correct feedback audio on after"><img loading="lazy" src="img/80cde994ab_t.jpg" alt="correct feedback audio on after"><figcaption>correct feedback audio on after</figcaption></figure>
+<figure class="card" data-v="img/84645ab508_v.jpg" data-n="letters trace"><img loading="lazy" src="img/84645ab508_t.jpg" alt="letters trace"><figcaption>letters trace</figcaption></figure>
+<figure class="card" data-v="img/45df7cdd97_v.jpg" data-n="letters reward"><img loading="lazy" src="img/45df7cdd97_t.jpg" alt="letters reward"><figcaption>letters reward</figcaption></figure>
+<figure class="card" data-v="img/a6ed6b3103_v.jpg" data-n="letters film end"><img loading="lazy" src="img/a6ed6b3103_t.jpg" alt="letters film end"><figcaption>letters film end</figcaption></figure>
+<figure class="card" data-v="img/376cbcec54_v.jpg" data-n="map after 1"><img loading="lazy" src="img/376cbcec54_t.jpg" alt="map after 1"><figcaption>map after 1</figcaption></figure>
+<figure class="card" data-v="img/0c15b18144_v.jpg" data-n="catch film start"><img loading="lazy" src="img/0c15b18144_t.jpg" alt="catch film start"><figcaption>catch film start</figcaption></figure>
+<figure class="card" data-v="img/992040cece_v.jpg" data-n="catch intro"><img loading="lazy" src="img/992040cece_t.jpg" alt="catch intro"><figcaption>catch intro</figcaption></figure>
+<figure class="card" data-v="img/46582d6908_v.jpg" data-n="catch reward"><img loading="lazy" src="img/46582d6908_t.jpg" alt="catch reward"><figcaption>catch reward</figcaption></figure>
+<figure class="card" data-v="img/5d41e13c1c_v.jpg" data-n="catch film end"><img loading="lazy" src="img/5d41e13c1c_t.jpg" alt="catch film end"><figcaption>catch film end</figcaption></figure>
+<figure class="card" data-v="img/e5e838f56a_v.jpg" data-n="map after 2"><img loading="lazy" src="img/e5e838f56a_t.jpg" alt="map after 2"><figcaption>map after 2</figcaption></figure>
+<figure class="card" data-v="img/f02227f392_v.jpg" data-n="dots film start"><img loading="lazy" src="img/f02227f392_t.jpg" alt="dots film start"><figcaption>dots film start</figcaption></figure>
+<figure class="card" data-v="img/7e4be01548_v.jpg" data-n="dots intro"><img loading="lazy" src="img/7e4be01548_t.jpg" alt="dots intro"><figcaption>dots intro</figcaption></figure>
+<figure class="card" data-v="img/1dc0c4adf8_v.jpg" data-n="dots reward"><img loading="lazy" src="img/1dc0c4adf8_t.jpg" alt="dots reward"><figcaption>dots reward</figcaption></figure>
+<figure class="card" data-v="img/6e90c2702f_v.jpg" data-n="dots film end"><img loading="lazy" src="img/6e90c2702f_t.jpg" alt="dots film end"><figcaption>dots film end</figcaption></figure>
+<figure class="card" data-v="img/357321805e_v.jpg" data-n="map after 3"><img loading="lazy" src="img/357321805e_t.jpg" alt="map after 3"><figcaption>map after 3</figcaption></figure>
+<figure class="card" data-v="img/02016e9dc4_v.jpg" data-n="memory film start"><img loading="lazy" src="img/02016e9dc4_t.jpg" alt="memory film start"><figcaption>memory film start</figcaption></figure>
+<figure class="card" data-v="img/c7a68732ee_v.jpg" data-n="memory intro"><img loading="lazy" src="img/c7a68732ee_t.jpg" alt="memory intro"><figcaption>memory intro</figcaption></figure>
+<figure class="card" data-v="img/cefd2e03aa_v.jpg" data-n="memory reward"><img loading="lazy" src="img/cefd2e03aa_t.jpg" alt="memory reward"><figcaption>memory reward</figcaption></figure>
+<figure class="card" data-v="img/7a5f3d62e4_v.jpg" data-n="memory film end"><img loading="lazy" src="img/7a5f3d62e4_t.jpg" alt="memory film end"><figcaption>memory film end</figcaption></figure>
+<figure class="card" data-v="img/27166cc794_v.jpg" data-n="map after 4"><img loading="lazy" src="img/27166cc794_t.jpg" alt="map after 4"><figcaption>map after 4</figcaption></figure>
+<figure class="card" data-v="img/bd7c0a55df_v.jpg" data-n="forms film start"><img loading="lazy" src="img/bd7c0a55df_t.jpg" alt="forms film start"><figcaption>forms film start</figcaption></figure>
+<figure class="card" data-v="img/cd6a96b2fb_v.jpg" data-n="forms intro"><img loading="lazy" src="img/cd6a96b2fb_t.jpg" alt="forms intro"><figcaption>forms intro</figcaption></figure>
+<figure class="card" data-v="img/6f5d88fd0c_v.jpg" data-n="joined answer"><img loading="lazy" src="img/6f5d88fd0c_t.jpg" alt="joined answer"><figcaption>joined answer</figcaption></figure>
+<figure class="card" data-v="img/3bb6aba482_v.jpg" data-n="forms reward"><img loading="lazy" src="img/3bb6aba482_t.jpg" alt="forms reward"><figcaption>forms reward</figcaption></figure>
+<figure class="card" data-v="img/b66bbf7384_v.jpg" data-n="forms film end"><img loading="lazy" src="img/b66bbf7384_t.jpg" alt="forms film end"><figcaption>forms film end</figcaption></figure>
+<figure class="card" data-v="img/2b73b3f61a_v.jpg" data-n="map after 5"><img loading="lazy" src="img/2b73b3f61a_t.jpg" alt="map after 5"><figcaption>map after 5</figcaption></figure>
+<figure class="card" data-v="img/14a4cf1101_v.jpg" data-n="sort film start"><img loading="lazy" src="img/14a4cf1101_t.jpg" alt="sort film start"><figcaption>sort film start</figcaption></figure>
+<figure class="card" data-v="img/06dfb621e1_v.jpg" data-n="sort intro"><img loading="lazy" src="img/06dfb621e1_t.jpg" alt="sort intro"><figcaption>sort intro</figcaption></figure>
+<figure class="card" data-v="img/fe13f77118_v.jpg" data-n="sort reward"><img loading="lazy" src="img/fe13f77118_t.jpg" alt="sort reward"><figcaption>sort reward</figcaption></figure>
+<figure class="card" data-v="img/962459bcc4_v.jpg" data-n="sort film end"><img loading="lazy" src="img/962459bcc4_t.jpg" alt="sort film end"><figcaption>sort film end</figcaption></figure>
+<figure class="card" data-v="img/37fa226016_v.jpg" data-n="map after 6"><img loading="lazy" src="img/37fa226016_t.jpg" alt="map after 6"><figcaption>map after 6</figcaption></figure>
+<figure class="card" data-v="img/0130f9d0bc_v.jpg" data-n="vowels film start"><img loading="lazy" src="img/0130f9d0bc_t.jpg" alt="vowels film start"><figcaption>vowels film start</figcaption></figure>
+<figure class="card" data-v="img/6af24e00d9_v.jpg" data-n="vowels intro"><img loading="lazy" src="img/6af24e00d9_t.jpg" alt="vowels intro"><figcaption>vowels intro</figcaption></figure>
+<figure class="card" data-v="img/a5b567312d_v.jpg" data-n="vowels reward"><img loading="lazy" src="img/a5b567312d_t.jpg" alt="vowels reward"><figcaption>vowels reward</figcaption></figure>
+<figure class="card" data-v="img/2cf5537620_v.jpg" data-n="vowels film end"><img loading="lazy" src="img/2cf5537620_t.jpg" alt="vowels film end"><figcaption>vowels film end</figcaption></figure>
+<figure class="card" data-v="img/663acc489a_v.jpg" data-n="map after 7"><img loading="lazy" src="img/663acc489a_t.jpg" alt="map after 7"><figcaption>map after 7</figcaption></figure>
+<figure class="card" data-v="img/8989bb56c2_v.jpg" data-n="module1 review film start"><img loading="lazy" src="img/8989bb56c2_t.jpg" alt="module1 review film start"><figcaption>module1 review film start</figcaption></figure>
+<figure class="card" data-v="img/4912f41ac8_v.jpg" data-n="module1 review intro"><img loading="lazy" src="img/4912f41ac8_t.jpg" alt="module1 review intro"><figcaption>module1 review intro</figcaption></figure>
+<figure class="card" data-v="img/dbcad9dea8_v.jpg" data-n="module1 review reward"><img loading="lazy" src="img/dbcad9dea8_t.jpg" alt="module1 review reward"><figcaption>module1 review reward</figcaption></figure>
+<figure class="card" data-v="img/8b5f9c41c2_v.jpg" data-n="module1 review film end"><img loading="lazy" src="img/8b5f9c41c2_t.jpg" alt="module1 review film end"><figcaption>module1 review film end</figcaption></figure>
+<figure class="card" data-v="img/8e859a7fb6_v.jpg" data-n="map after 8"><img loading="lazy" src="img/8e859a7fb6_t.jpg" alt="map after 8"><figcaption>map after 8</figcaption></figure>
+<figure class="card" data-v="img/6b2333a6df_v.jpg" data-n="module1 challenge film start"><img loading="lazy" src="img/6b2333a6df_t.jpg" alt="module1 challenge film start"><figcaption>module1 challenge film start</figcaption></figure>
+<figure class="card" data-v="img/9ea64ec06d_v.jpg" data-n="module1 challenge intro"><img loading="lazy" src="img/9ea64ec06d_t.jpg" alt="module1 challenge intro"><figcaption>module1 challenge intro</figcaption></figure>
+<figure class="card" data-v="img/5ebbf01a14_v.jpg" data-n="module1 challenge reward"><img loading="lazy" src="img/5ebbf01a14_t.jpg" alt="module1 challenge reward"><figcaption>module1 challenge reward</figcaption></figure>
+<figure class="card" data-v="img/ecdfe81eaf_v.jpg" data-n="module1 challenge film end"><img loading="lazy" src="img/ecdfe81eaf_t.jpg" alt="module1 challenge film end"><figcaption>module1 challenge film end</figcaption></figure>
+<figure class="card" data-v="img/9161844de9_v.jpg" data-n="map after 9"><img loading="lazy" src="img/9161844de9_t.jpg" alt="map after 9"><figcaption>map after 9</figcaption></figure>
+<figure class="card" data-v="img/a01dc67867_v.jpg" data-n="replay no extra xp"><img loading="lazy" src="img/a01dc67867_t.jpg" alt="replay no extra xp"><figcaption>replay no extra xp</figcaption></figure>
+<figure class="card" data-v="img/017bc155c7_v.jpg" data-n="map locale uz"><img loading="lazy" src="img/017bc155c7_t.jpg" alt="map locale uz"><figcaption>map locale uz</figcaption></figure>
+<figure class="card" data-v="img/08b20ef245_v.jpg" data-n="lighthouse uz"><img loading="lazy" src="img/08b20ef245_t.jpg" alt="lighthouse uz"><figcaption>lighthouse uz</figcaption></figure>
+<figure class="card" data-v="img/b37bbdb90e_v.jpg" data-n="map locale en"><img loading="lazy" src="img/b37bbdb90e_t.jpg" alt="map locale en"><figcaption>map locale en</figcaption></figure>
+<figure class="card" data-v="img/3653ab7dc2_v.jpg" data-n="lighthouse en"><img loading="lazy" src="img/3653ab7dc2_t.jpg" alt="lighthouse en"><figcaption>lighthouse en</figcaption></figure>
+<figure class="card" data-v="img/76ab92a040_v.jpg" data-n="map locale ru"><img loading="lazy" src="img/76ab92a040_t.jpg" alt="map locale ru"><figcaption>map locale ru</figcaption></figure>
+<figure class="card" data-v="img/f33a0493cd_v.jpg" data-n="lighthouse ru"><img loading="lazy" src="img/f33a0493cd_t.jpg" alt="lighthouse ru"><figcaption>lighthouse ru</figcaption></figure></div></section>
+<section id="design"><div class="bar"><h2>8. Листы раскладки</h2><span class="cnt">15 экранов</span></div><p class="sub">Сводные листы экранов и графика карты</p><div class="grid"><figure class="card" data-v="img/58196fbeb9_v.jpg" data-n="design 320 map 0"><img loading="lazy" src="img/58196fbeb9_t.jpg" alt="design 320 map 0"><figcaption>design 320 map 0</figcaption></figure>
+<figure class="card" data-v="img/a1e0bb09bb_v.jpg" data-n="design 320 map 3"><img loading="lazy" src="img/a1e0bb09bb_t.jpg" alt="design 320 map 3"><figcaption>design 320 map 3</figcaption></figure>
+<figure class="card" data-v="img/611c3857bd_v.jpg" data-n="design 320 map 7"><img loading="lazy" src="img/611c3857bd_t.jpg" alt="design 320 map 7"><figcaption>design 320 map 7</figcaption></figure>
+<figure class="card" data-v="img/8041f0cbb5_v.jpg" data-n="design 320 map 9"><img loading="lazy" src="img/8041f0cbb5_t.jpg" alt="design 320 map 9"><figcaption>design 320 map 9</figcaption></figure>
+<figure class="card" data-v="img/a622d23d68_v.jpg" data-n="design 320 route 0"><img loading="lazy" src="img/a622d23d68_t.jpg" alt="design 320 route 0"><figcaption>design 320 route 0</figcaption></figure>
+<figure class="card" data-v="img/3272f2964c_v.jpg" data-n="design 320 route 1"><img loading="lazy" src="img/3272f2964c_t.jpg" alt="design 320 route 1"><figcaption>design 320 route 1</figcaption></figure>
+<figure class="card" data-v="img/843f5f9661_v.jpg" data-n="design 320 route 2"><img loading="lazy" src="img/843f5f9661_t.jpg" alt="design 320 route 2"><figcaption>design 320 route 2</figcaption></figure>
+<figure class="card" data-v="img/cd9e424b59_v.jpg" data-n="design 412 map 0"><img loading="lazy" src="img/cd9e424b59_t.jpg" alt="design 412 map 0"><figcaption>design 412 map 0</figcaption></figure>
+<figure class="card" data-v="img/7964bb11b9_v.jpg" data-n="design 412 map 3"><img loading="lazy" src="img/7964bb11b9_t.jpg" alt="design 412 map 3"><figcaption>design 412 map 3</figcaption></figure>
+<figure class="card" data-v="img/c293d7dc49_v.jpg" data-n="design 412 map 7"><img loading="lazy" src="img/c293d7dc49_t.jpg" alt="design 412 map 7"><figcaption>design 412 map 7</figcaption></figure>
+<figure class="card" data-v="img/5d592987c6_v.jpg" data-n="design 412 map 9"><img loading="lazy" src="img/5d592987c6_t.jpg" alt="design 412 map 9"><figcaption>design 412 map 9</figcaption></figure>
+<figure class="card" data-v="img/08768feb5c_v.jpg" data-n="design 412 route 0"><img loading="lazy" src="img/08768feb5c_t.jpg" alt="design 412 route 0"><figcaption>design 412 route 0</figcaption></figure>
+<figure class="card" data-v="img/f1a71208e8_v.jpg" data-n="design 412 route 1"><img loading="lazy" src="img/f1a71208e8_t.jpg" alt="design 412 route 1"><figcaption>design 412 route 1</figcaption></figure>
+<figure class="card" data-v="img/581d37e95c_v.jpg" data-n="design 412 route 2"><img loading="lazy" src="img/581d37e95c_t.jpg" alt="design 412 route 2"><figcaption>design 412 route 2</figcaption></figure>
+<figure class="card" data-v="img/683648d715_v.jpg" data-n="landmarks"><img loading="lazy" src="img/683648d715_t.jpg" alt="landmarks"><figcaption>landmarks</figcaption></figure></div></section></main>
+<div id="lb"><span class="x">&times;</span><span class="arr prev">&#8249;</span>
+  <span class="arr next">&#8250;</span><img id="lbi" alt=""><div id="lbn"></div></div>
+<script>
+var cards = [].slice.call(document.querySelectorAll('.card'));
+var lb = document.getElementById('lb'), lbi = document.getElementById('lbi'),
+    lbn = document.getElementById('lbn'), cur = -1;
+function show(i){
+  if(i < 0 || i >= cards.length) return;
+  cur = i; lbi.src = cards[i].dataset.v; lbn.textContent = cards[i].dataset.n;
+  lb.classList.add('on');
+}
+cards.forEach(function(c, i){ c.addEventListener('click', function(){ show(i); }); });
+lb.querySelector('.x').onclick = function(){ lb.classList.remove('on'); };
+lb.querySelector('.prev').onclick = function(e){ e.stopPropagation(); show(cur-1); };
+lb.querySelector('.next').onclick = function(e){ e.stopPropagation(); show(cur+1); };
+lb.addEventListener('click', function(e){ if(e.target === lb) lb.classList.remove('on'); });
+document.addEventListener('keydown', function(e){
+  if(!lb.classList.contains('on')) return;
+  if(e.key === 'Escape') lb.classList.remove('on');
+  if(e.key === 'ArrowLeft') show(cur-1);
+  if(e.key === 'ArrowRight') show(cur+1);
+});
+</script></body></html>
